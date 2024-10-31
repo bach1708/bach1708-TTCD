@@ -1,0 +1,72 @@
+﻿@{
+    ViewBag.Title = "Napoleon(Home)";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <link rel="stylesheet" href="~/Content/Slideshow.css" />
+</head>
+<div class="slide-show">
+    <div class="images-list">
+        <img src="~/Content/images/logopage.png" />
+        <img src="~/Content/images/logopage4.jpg" />
+        <img src="~/Content/images/logopage5.jpg" />
+        <img src="~/Content/images/logopage7.png" />
+        <img src="~/Content/images/logopage6.jpg" />
+
+    </div>
+</div>
+<!-- Banner -->
+<body>
+    <div class="Name-page" style=" text-align:center">
+        <h1>Rạp Chiếu Phim Online</h1>
+        <p>Trải nghiệm đặt vé nhanh chóng và tiện lợi</p>
+            <div class="Movie-time" style="text-align:center">
+                <a href="@Url.Action("Index", "Showtimes")" class="btn btn-primary btn-lg">Phim Đang Chiếu</a>
+                <a href="@Url.Action("Index", "Showtimes")" class="btn btn-primary btn-lg">Phim Đang Chiếu</a>
+            </div>
+    </div>
+        
+        
+    <!-- Giới thiệu ngắn -->
+    <section class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Về Chúng Tôi</h2>
+                <p>Chúng tôi mang đến trải nghiệm đặt vé xem phim trực tuyến tốt nhất. Bạn có thể xem lịch chiếu, đặt chỗ ngồi và thanh toán dễ dàng ngay tại nhà!</p>
+            </div>
+            <div class="col-md-6">
+                <img src="~/Content/images/cinema.jpg" alt="Rạp Chiếu Phim" class="img-fluid rounded">
+            </div>
+        </div>
+    </section>
+</body>
+
+<!-- Tính năng chính -->
+<section class="container mt-5">
+    <h2 class="text-center">Các Tính Năng Chính</h2>
+    <div class="row text-center mt-4">
+        <div class="col-md-4">
+            <i class="fa fa-film fa-3x mb-3" style="color: #e74c3c;"></i>
+            <h4>Đặt Vé Nhanh Chóng</h4>
+            <p>Chọn ghế ngồi và đặt vé chỉ với vài bước đơn giản.</p>
+            <a href="@Url.Action("Index", "Bookings")" class="btn btn-primary btn-lg">Đặt Vé Ngay</a>
+        </div>
+        <div class="col-md-4">
+            <i class="fa fa-calendar fa-3x mb-3" style="color: #3498db;"></i>
+            <h4>Lịch Chiếu Phim Liên Tục</h4>
+            <p>Cập nhật lịch chiếu mới nhất và thông tin các bộ phim đang hot.</p>
+            <a href="@Url.Action("Index", "Showtimes")" class="btn btn-primary btn-lg">Lịch Chiếu</a>
+        </div>
+        <div class="col-md-4">
+            <i class="fa fa-credit-card fa-3x mb-3" style="color: #2ecc71;"></i>
+            <h4>Thanh Toán An Toàn</h4>
+            <p>Hỗ trợ thanh toán trực tuyến an toàn và tiện lợi.</p>
+            <a href="@Url.Action("Index", "Payments")" class="btn btn-primary btn-lg">Phim Đã Chọn</a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center mt-5" style="background-color: #2c3e50; color: white; padding: 20px;">
+    <p>© 2024 Rạp Chiếu Phim Online - Đặt Vé Xem Phim Trực Tuyến</p>
+</footer>

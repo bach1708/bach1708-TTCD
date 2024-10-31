@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="~/Content/CSS_TrangChu.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-gradient">
+        <div class="container">
+            @Html.ActionLink("Web Đặt Vé Xem Phim Hiệu Napoleon", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="">
+                <ul class="navbar-nav flex-grow-1">
+                    <li>@Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Admin", "Index", "Admins", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Đặt Vé", "Index", "Bookings", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Người Dùng", "Index", "Users", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Cinemas", "Index", "Cinemas", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Movies", "Index", "Movies", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Lịch Chiếu", "Index", "Showtimes", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Thanh Toán", "Index", "Payments", new { area = "" }, new { @class = "nav-link" })</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+       
+        </div>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+    </body>
+    </html>

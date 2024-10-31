@@ -1,0 +1,58 @@
+﻿@model K22CNT2_NongVanBach_2210900003.Models.Payment
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Payment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.phuong_thuc_thanh_toan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.phuong_thuc_thanh_toan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.so_tien)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.so_tien)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.trang_thai_thanh_toan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.trang_thai_thanh_toan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ngay_thanh_toan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ngay_thanh_toan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Booking.ghe_ngoi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Booking.ghe_ngoi)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ma_giao_dich }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,45 @@
+﻿@model IEnumerable<K22CNT2_NongVanBach_2210900003.Models.Admin>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Danh Sách Tài Khoản Admin đã tạo</h2>
+
+<p>
+    @Html.ActionLink("Thêm mới", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ho_ten)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mat_khau)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ho_ten)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mat_khau)
+        </td>
+        <td>
+            @Html.ActionLink("Sửa", "Edit", new { id=item.ma_quan_tri }) |
+            @Html.ActionLink("Thông tin", "Details", new { id=item.ma_quan_tri }) |
+            @Html.ActionLink("Xóa", "Delete", new { id=item.ma_quan_tri })
+        </td>
+    </tr>
+}
+
+</table>

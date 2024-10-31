@@ -1,0 +1,57 @@
+﻿@model K22CNT2_NongVanBach_2210900003.Models.Cinema
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Sửa Thông Tin Rạp</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.ma_rap)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ten_rap, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ten_rap, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ten_rap, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.dia_chi, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.dia_chi, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.dia_chi, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.suc_chua, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.suc_chua, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.suc_chua, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <button style="width:60px; height:40px;"><input type="submit" value="Lưu" class="btn btn-default" /></button>|<button style="width:100px; height:40px;">@Html.ActionLink("Quay Lại", "Index")</button>
+            </div>
+        </div>
+    </div>
+}
+
+
+    
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
