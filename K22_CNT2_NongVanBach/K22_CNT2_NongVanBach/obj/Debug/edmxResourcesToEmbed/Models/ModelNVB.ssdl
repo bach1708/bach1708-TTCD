@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Project2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CT_DON_HANG">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_DH" Type="int" />
+    <Property Name="ID_SP" Type="int" />
+    <Property Name="So_Luong" Type="int" />
+    <Property Name="Don_gia" Type="float" />
+    <Property Name="Thanh_tien" Type="float" />
+  </EntityType>
+  <EntityType Name="DON_HANG">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaDH" Type="varchar" MaxLength="50" />
+    <Property Name="MaKH" Type="int" />
+    <Property Name="Ten_Nguoi_Nhan" Type="nvarchar" MaxLength="100" />
+    <Property Name="Dia_Chi_Nhan" Type="nvarchar" MaxLength="255" />
+    <Property Name="Dien_Thoai_Nhan" Type="varchar" MaxLength="50" />
+    <Property Name="Ngay_dat" Type="datetime" />
+    <Property Name="Tong_tien" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="Trang_thai" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="KHACH_HANG">
+    <Key>
+      <PropertyRef Name="MaKH" />
+    </Key>
+    <Property Name="MaKH" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ho_ten" Type="nvarchar" MaxLength="100" />
+    <Property Name="Tai_khoan" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Mat_khau" Type="varchar" MaxLength="32" />
+    <Property Name="Dia_chi" Type="nvarchar" MaxLength="200" />
+    <Property Name="Dien_thoai" Type="varchar" MaxLength="30" />
+    <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Ngay_sinh" Type="datetime" />
+    <Property Name="Ngay_cap_nhat" Type="datetime" />
+    <Property Name="Gioi_tinh" Type="tinyint" />
+    <Property Name="Tich_diem" Type="int" />
+    <Property Name="Trang_thai" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="QuanTri">
+    <Key>
+      <PropertyRef Name="Tai_khoan" />
+    </Key>
+    <Property Name="Tai_khoan" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Mat_khau" Type="varchar" MaxLength="50" />
+    <Property Name="Trang_Thai" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="SAN_PHAM">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Image" Type="nvarchar" MaxLength="255" />
+    <Property Name="Price" Type="float" />
+    <Property Name="Quanity" Type="int" />
+    <Property Name="Status" Type="tinyint" />
+  </EntityType>
+  <Association Name="FK__DON_HANG__MaKH__3F466844">
+    <End Role="KHACH_HANG" Type="Self.KHACH_HANG" Multiplicity="0..1" />
+    <End Role="DON_HANG" Type="Self.DON_HANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KHACH_HANG">
+        <PropertyRef Name="MaKH" />
+      </Principal>
+      <Dependent Role="DON_HANG">
+        <PropertyRef Name="MaKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Project2ModelStoreContainer">
+    <EntitySet Name="CT_DON_HANG" EntityType="Self.CT_DON_HANG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DON_HANG" EntityType="Self.DON_HANG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KHACH_HANG" EntityType="Self.KHACH_HANG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QuanTri" EntityType="Self.QuanTri" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SAN_PHAM" EntityType="Self.SAN_PHAM" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__DON_HANG__MaKH__3F466844" Association="Self.FK__DON_HANG__MaKH__3F466844">
+      <End Role="KHACH_HANG" EntitySet="KHACH_HANG" />
+      <End Role="DON_HANG" EntitySet="DON_HANG" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,82 @@
+﻿@model K22_CNT2_NongVanBach.Models.DON_HANG
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DON_HANG</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MaDH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaDH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ten_Nguoi_Nhan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ten_Nguoi_Nhan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dia_Chi_Nhan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dia_Chi_Nhan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dien_Thoai_Nhan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dien_Thoai_Nhan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ngay_dat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ngay_dat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tong_tien)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tong_tien)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Trang_thai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Trang_thai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KHACH_HANG.Ho_ten)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KHACH_HANG.Ho_ten)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

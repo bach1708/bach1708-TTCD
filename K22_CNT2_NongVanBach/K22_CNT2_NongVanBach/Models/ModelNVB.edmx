@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Project2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CT_DON_HANG">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_DH" Type="int" />
+          <Property Name="ID_SP" Type="int" />
+          <Property Name="So_Luong" Type="int" />
+          <Property Name="Don_gia" Type="float" />
+          <Property Name="Thanh_tien" Type="float" />
+        </EntityType>
+        <EntityType Name="DON_HANG">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MaDH" Type="varchar" MaxLength="50" />
+          <Property Name="MaKH" Type="int" />
+          <Property Name="Ten_Nguoi_Nhan" Type="nvarchar" MaxLength="100" />
+          <Property Name="Dia_Chi_Nhan" Type="nvarchar" MaxLength="255" />
+          <Property Name="Dien_Thoai_Nhan" Type="varchar" MaxLength="50" />
+          <Property Name="Ngay_dat" Type="datetime" />
+          <Property Name="Tong_tien" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="Trang_thai" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="KHACH_HANG">
+          <Key>
+            <PropertyRef Name="MaKH" />
+          </Key>
+          <Property Name="MaKH" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ho_ten" Type="nvarchar" MaxLength="100" />
+          <Property Name="Tai_khoan" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Mat_khau" Type="varchar" MaxLength="32" />
+          <Property Name="Dia_chi" Type="nvarchar" MaxLength="200" />
+          <Property Name="Dien_thoai" Type="varchar" MaxLength="30" />
+          <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Ngay_sinh" Type="datetime" />
+          <Property Name="Ngay_cap_nhat" Type="datetime" />
+          <Property Name="Gioi_tinh" Type="tinyint" />
+          <Property Name="Tich_diem" Type="int" />
+          <Property Name="Trang_thai" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="QuanTri">
+          <Key>
+            <PropertyRef Name="Tai_khoan" />
+          </Key>
+          <Property Name="Tai_khoan" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Mat_khau" Type="varchar" MaxLength="50" />
+          <Property Name="Trang_Thai" Type="tinyint" />
+        </EntityType>
+        <EntityType Name="SAN_PHAM">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Image" Type="nvarchar" MaxLength="255" />
+          <Property Name="Price" Type="float" />
+          <Property Name="Quanity" Type="int" />
+          <Property Name="Status" Type="tinyint" />
+        </EntityType>
+        <Association Name="FK__DON_HANG__MaKH__3F466844">
+          <End Role="KHACH_HANG" Type="Self.KHACH_HANG" Multiplicity="0..1" />
+          <End Role="DON_HANG" Type="Self.DON_HANG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KHACH_HANG">
+              <PropertyRef Name="MaKH" />
+            </Principal>
+            <Dependent Role="DON_HANG">
+              <PropertyRef Name="MaKH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Project2ModelStoreContainer">
+          <EntitySet Name="CT_DON_HANG" EntityType="Self.CT_DON_HANG" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DON_HANG" EntityType="Self.DON_HANG" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KHACH_HANG" EntityType="Self.KHACH_HANG" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="QuanTri" EntityType="Self.QuanTri" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SAN_PHAM" EntityType="Self.SAN_PHAM" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__DON_HANG__MaKH__3F466844" Association="Self.FK__DON_HANG__MaKH__3F466844">
+            <End Role="KHACH_HANG" EntitySet="KHACH_HANG" />
+            <End Role="DON_HANG" EntitySet="DON_HANG" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Project2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CT_DON_HANG">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_DH" Type="Int32" />
+          <Property Name="ID_SP" Type="Int32" />
+          <Property Name="So_Luong" Type="Int32" />
+          <Property Name="Don_gia" Type="Double" />
+          <Property Name="Thanh_tien" Type="Double" />
+        </EntityType>
+        <EntityType Name="DON_HANG">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MaDH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MaKH" Type="Int32" />
+          <Property Name="Ten_Nguoi_Nhan" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Dia_Chi_Nhan" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Dien_Thoai_Nhan" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Ngay_dat" Type="DateTime" Precision="3" />
+          <Property Name="Tong_tien" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="Trang_thai" Type="Byte" />
+          <NavigationProperty Name="KHACH_HANG" Relationship="Self.FK__DON_HANG__MaKH__3F466844" FromRole="DON_HANG" ToRole="KHACH_HANG" />
+        </EntityType>
+        <EntityType Name="KHACH_HANG">
+          <Key>
+            <PropertyRef Name="MaKH" />
+          </Key>
+          <Property Name="MaKH" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ho_ten" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Tai_khoan" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Mat_khau" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="Dia_chi" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Dien_thoai" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Ngay_sinh" Type="DateTime" Precision="3" />
+          <Property Name="Ngay_cap_nhat" Type="DateTime" Precision="3" />
+          <Property Name="Gioi_tinh" Type="Byte" />
+          <Property Name="Tich_diem" Type="Int32" />
+          <Property Name="Trang_thai" Type="Byte" />
+          <NavigationProperty Name="DON_HANG" Relationship="Self.FK__DON_HANG__MaKH__3F466844" FromRole="KHACH_HANG" ToRole="DON_HANG" />
+        </EntityType>
+        <EntityType Name="QuanTri">
+          <Key>
+            <PropertyRef Name="Tai_khoan" />
+          </Key>
+          <Property Name="Tai_khoan" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Mat_khau" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Trang_Thai" Type="Byte" />
+        </EntityType>
+        <EntityType Name="SAN_PHAM">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Image" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="Double" />
+          <Property Name="Quanity" Type="Int32" />
+          <Property Name="Status" Type="Byte" />
+        </EntityType>
+        <Association Name="FK__DON_HANG__MaKH__3F466844">
+          <End Role="KHACH_HANG" Type="Self.KHACH_HANG" Multiplicity="0..1" />
+          <End Role="DON_HANG" Type="Self.DON_HANG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KHACH_HANG">
+              <PropertyRef Name="MaKH" />
+            </Principal>
+            <Dependent Role="DON_HANG">
+              <PropertyRef Name="MaKH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Project2Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CT_DON_HANG" EntityType="Self.CT_DON_HANG" />
+          <EntitySet Name="DON_HANG" EntityType="Self.DON_HANG" />
+          <EntitySet Name="KHACH_HANG" EntityType="Self.KHACH_HANG" />
+          <EntitySet Name="QuanTris" EntityType="Self.QuanTri" />
+          <EntitySet Name="SAN_PHAM" EntityType="Self.SAN_PHAM" />
+          <AssociationSet Name="FK__DON_HANG__MaKH__3F466844" Association="Self.FK__DON_HANG__MaKH__3F466844">
+            <End Role="KHACH_HANG" EntitySet="KHACH_HANG" />
+            <End Role="DON_HANG" EntitySet="DON_HANG" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Project2ModelStoreContainer" CdmEntityContainer="Project2Entities">
+          <EntitySetMapping Name="CT_DON_HANG">
+            <EntityTypeMapping TypeName="Project2Model.CT_DON_HANG">
+              <MappingFragment StoreEntitySet="CT_DON_HANG">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ID_DH" ColumnName="ID_DH" />
+                <ScalarProperty Name="ID_SP" ColumnName="ID_SP" />
+                <ScalarProperty Name="So_Luong" ColumnName="So_Luong" />
+                <ScalarProperty Name="Don_gia" ColumnName="Don_gia" />
+                <ScalarProperty Name="Thanh_tien" ColumnName="Thanh_tien" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DON_HANG">
+            <EntityTypeMapping TypeName="Project2Model.DON_HANG">
+              <MappingFragment StoreEntitySet="DON_HANG">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="MaDH" ColumnName="MaDH" />
+                <ScalarProperty Name="MaKH" ColumnName="MaKH" />
+                <ScalarProperty Name="Ten_Nguoi_Nhan" ColumnName="Ten_Nguoi_Nhan" />
+                <ScalarProperty Name="Dia_Chi_Nhan" ColumnName="Dia_Chi_Nhan" />
+                <ScalarProperty Name="Dien_Thoai_Nhan" ColumnName="Dien_Thoai_Nhan" />
+                <ScalarProperty Name="Ngay_dat" ColumnName="Ngay_dat" />
+                <ScalarProperty Name="Tong_tien" ColumnName="Tong_tien" />
+                <ScalarProperty Name="Trang_thai" ColumnName="Trang_thai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KHACH_HANG">
+            <EntityTypeMapping TypeName="Project2Model.KHACH_HANG">
+              <MappingFragment StoreEntitySet="KHACH_HANG">
+                <ScalarProperty Name="MaKH" ColumnName="MaKH" />
+                <ScalarProperty Name="Ho_ten" ColumnName="Ho_ten" />
+                <ScalarProperty Name="Tai_khoan" ColumnName="Tai_khoan" />
+                <ScalarProperty Name="Mat_khau" ColumnName="Mat_khau" />
+                <ScalarProperty Name="Dia_chi" ColumnName="Dia_chi" />
+                <ScalarProperty Name="Dien_thoai" ColumnName="Dien_thoai" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Ngay_sinh" ColumnName="Ngay_sinh" />
+                <ScalarProperty Name="Ngay_cap_nhat" ColumnName="Ngay_cap_nhat" />
+                <ScalarProperty Name="Gioi_tinh" ColumnName="Gioi_tinh" />
+                <ScalarProperty Name="Tich_diem" ColumnName="Tich_diem" />
+                <ScalarProperty Name="Trang_thai" ColumnName="Trang_thai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="QuanTris">
+            <EntityTypeMapping TypeName="Project2Model.QuanTri">
+              <MappingFragment StoreEntitySet="QuanTri">
+                <ScalarProperty Name="Tai_khoan" ColumnName="Tai_khoan" />
+                <ScalarProperty Name="Mat_khau" ColumnName="Mat_khau" />
+                <ScalarProperty Name="Trang_Thai" ColumnName="Trang_Thai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SAN_PHAM">
+            <EntityTypeMapping TypeName="Project2Model.SAN_PHAM">
+              <MappingFragment StoreEntitySet="SAN_PHAM">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Quanity" ColumnName="Quanity" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

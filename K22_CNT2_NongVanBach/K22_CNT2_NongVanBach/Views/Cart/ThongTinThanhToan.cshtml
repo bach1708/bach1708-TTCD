@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "ThongTinThanhToan";
+}
+
+<h2>ThongTinThanhToan</h2>
+@using (Html.BeginForm("ThanhToan","Cart"))
+{
+    <div>
+        <label>Họ Tên Người Nhận</label>
+        <input name="Ten_Nguoi_Nhan" />
+    </div>
+    <div>
+        <label>Địa Chỉ Người Nhận</label>
+        <input name="Dia_Chi_Nhan" />
+    </div>
+    <div>
+        <label>Số Điện Thoại Người Nhận</label>
+        <input name="Dien_Thoai_Nhan" />
+    </div>
+    <button>Thanh Toán</button>
+}

@@ -1,0 +1,44 @@
+﻿@model K22_CNT2_NongVanBach.Bussiness.ShoppingCart
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Giỏ Hàng Của Bạn</h2>
+<table class=" table table-bordered">
+    <thead>
+        <tr>
+            <th>Mã</th>
+            <th>Sản Phẩm</th>
+            <th>Ảnh</th>
+            <th>Giá</th>
+            <th>Số Lượng</th>
+            <th>Sản Phẩm</th>
+            <th>Hành Động</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (K22_CNT2_NongVanBach.ModelView.CartItem item in Model.Items)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Image</td>
+                <td>@item.Price.ToString("C")</td>
+                <td>
+                    @item.Qty
+                                <input type="number" value="@item.Qty" name="qty" />
+                            </td>
+                <td>@item.Total.ToString("C")</td>
+               
+                <td>
+                    <a href="javascript:void(0)" onclick="UpdateCartItem()">Cập Nhật</a>
+                    @Html.ActionLink("Xóa", "RemoveFromCart", new { productId = item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+        <h3>Tổng Tiền: @Model.GetTotal().ToString("C")</h3>
+<a href="Cart/ThongTinThanhToan">Thanh toán</a>
+    
