@@ -1,0 +1,70 @@
+﻿@model IEnumerable<K22CNT2_NongVanBach_2210900003.Models.Movy>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Phim</h2>
+
+<p>
+    @Html.ActionLink("Phát Hành Phim Mới", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ten_phim)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.the_loai)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dao_dien)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dien_vien)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.thoi_luong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ngay_phat_hanh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mo_ta)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ten_phim)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.the_loai)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dao_dien)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dien_vien)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.thoi_luong)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ngay_phat_hanh)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mo_ta)
+            </td>
+            <td>
+                @Html.ActionLink("Sửa", "Edit", new { id = item.ma_phim }) |
+                @Html.ActionLink("Thông Tin", "Details", new { id = item.ma_phim }) |
+                @Html.ActionLink("Xóa", "Delete", new { id = item.ma_phim })
+            </td>
+        </tr>
+    }
+
+</table>

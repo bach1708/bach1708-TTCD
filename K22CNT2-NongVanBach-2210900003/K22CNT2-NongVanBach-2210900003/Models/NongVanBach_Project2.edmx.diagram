@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="12de379626084e058ef8f67462692711" Name="Diagram1">
+        <EntityTypeShape EntityType="NongVanBach_Project2.Admin" Width="1.5" PointX="3.75" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="NongVanBach_Project2.Booking" Width="1.5" PointX="8.25" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="NongVanBach_Project2.Cart" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NongVanBach_Project2.CartItem" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="NongVanBach_Project2.Cinema" Width="1.5" PointX="3.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NongVanBach_Project2.Movy" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="NongVanBach_Project2.Payment" Width="1.5" PointX="10.5" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="NongVanBach_Project2.Showtime" Width="1.5" PointX="6" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="NongVanBach_Project2.sysdiagram" Width="1.5" PointX="5.75" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="NongVanBach_Project2.User" Width="1.5" PointX="0.75" PointY="8" IsExpanded="true" />
+        <AssociationConnector Association="NongVanBach_Project2.FK__Bookings__ma_ngu__5AEE82B9" ManuallyRouted="false" />
+        <AssociationConnector Association="NongVanBach_Project2.FK__Bookings__ma_sua__5BE2A6F2" ManuallyRouted="false" />
+        <AssociationConnector Association="NongVanBach_Project2.FK__Payments__ma_dat__5FB337D6" ManuallyRouted="false" />
+        <AssociationConnector Association="NongVanBach_Project2.FK__Cart__UserId__70DDC3D8" ManuallyRouted="false" />
+        <AssociationConnector Association="NongVanBach_Project2.FK__CartItem__CartId__74AE54BC" ManuallyRouted="false" />
+        <AssociationConnector Association="NongVanBach_Project2.FK__CartItem__MovieI__75A278F5" ManuallyRouted="false" />
+        <AssociationConnector Association="NongVanBach_Project2.FK__Showtimes__ma_ra__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="NongVanBach_Project2.FK__Showtimes__ma_ph__534D60F1" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="NongVanBach_Project2.CT_DON_HANG" Width="1.5" PointX="8.375" PointY="11.125" />
+        <EntityTypeShape EntityType="NongVanBach_Project2.DON_HANG" Width="1.5" PointX="6.125" PointY="10.875" />
+        <EntityTypeShape EntityType="NongVanBach_Project2.KHACH_HANG" Width="1.5" PointX="3.875" PointY="10.625" />
+        <EntityTypeShape EntityType="NongVanBach_Project2.SAN_PHAM" Width="1.5" PointX="10.75" PointY="11.25" />
+        <AssociationConnector Association="NongVanBach_Project2.FK__CT_DON_HA__ID_DH__03F0984C" />
+        <AssociationConnector Association="NongVanBach_Project2.FK__CT_DON_HA__ID_SP__04E4BC85" />
+        <AssociationConnector Association="NongVanBach_Project2.FK__DON_HANG__MaKH__01142BA1" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

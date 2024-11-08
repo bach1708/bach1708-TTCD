@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ac9427602abc4f12897732016c9d7a49" Name="Diagram1">
+        <EntityTypeShape EntityType="NVB_Project2Model.Admin" Width="1.5" PointX="0.75" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="NVB_Project2Model.Booking" Width="1.5" PointX="8.25" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="NVB_Project2Model.Cart" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NVB_Project2Model.CartItem" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="NVB_Project2Model.Cinema" Width="1.5" PointX="3.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NVB_Project2Model.CT_DON_HANG" Width="1.5" PointX="8.25" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="NVB_Project2Model.DON_HANG" Width="1.5" PointX="6" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NVB_Project2Model.KHACH_HANG" Width="1.5" PointX="3.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="NVB_Project2Model.Movy" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="NVB_Project2Model.Payment" Width="1.5" PointX="10.5" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="NVB_Project2Model.SAN_PHAM" Width="1.5" PointX="6" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="NVB_Project2Model.Showtime" Width="1.5" PointX="6" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="NVB_Project2Model.sysdiagram" Width="1.5" PointX="10.75" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="NVB_Project2Model.User" Width="1.5" PointX="1.5" PointY="8.875" IsExpanded="true" />
+        <AssociationConnector Association="NVB_Project2Model.FK__Bookings__ma_ngu__5AEE82B9" ManuallyRouted="false" />
+        <AssociationConnector Association="NVB_Project2Model.FK__Bookings__ma_sua__5BE2A6F2" ManuallyRouted="false" />
+        <AssociationConnector Association="NVB_Project2Model.FK__Payments__ma_dat__5FB337D6" ManuallyRouted="false" />
+        <AssociationConnector Association="NVB_Project2Model.FK__Cart__UserId__70DDC3D8" ManuallyRouted="false" />
+        <AssociationConnector Association="NVB_Project2Model.FK__CartItem__CartId__74AE54BC" ManuallyRouted="false" />
+        <AssociationConnector Association="NVB_Project2Model.FK__CartItem__MovieI__75A278F5" ManuallyRouted="false" />
+        <AssociationConnector Association="NVB_Project2Model.FK__Showtimes__ma_ra__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="NVB_Project2Model.FK__CT_DON_HA__ID_DH__03F0984C" ManuallyRouted="false" />
+        <AssociationConnector Association="NVB_Project2Model.FK__CT_DON_HA__ID_SP__04E4BC85" ManuallyRouted="false" />
+        <AssociationConnector Association="NVB_Project2Model.FK__DON_HANG__MaKH__01142BA1" ManuallyRouted="false" />
+        <AssociationConnector Association="NVB_Project2Model.FK__Showtimes__ma_ph__534D60F1" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

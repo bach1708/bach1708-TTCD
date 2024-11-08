@@ -1,0 +1,40 @@
+﻿@model K22CNT2_NongVanBach_2210900003.Models.Admin
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Thông tin</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ho_ten)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ho_ten)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mat_khau)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mat_khau)
+        </dd>
+
+    </dl>
+</div>
+<div>
+    <button style="width: 50px; height:40px;"> @Html.ActionLink("Sửa", "Edit", new { id = Model.ma_quan_tri }) </button>|<button style="width: 100px; height:40px;"> @Html.ActionLink("Quay lại", "Index")</button>
+</div>  

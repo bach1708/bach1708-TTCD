@@ -1,0 +1,65 @@
+﻿@model K22CNT2_NongVanBach_2210900003.Models.Showtime
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Xóa</h2>
+
+<h3>Bạn Có Chắc Không?</h3>
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ngay_chieu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ngay_chieu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gio_chieu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gio_chieu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.phong_chieu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.phong_chieu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cinema.ten_rap)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cinema.ten_rap)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Movy.ten_phim)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Movy.ten_phim)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <button style="background-image: linear-gradient(to right, #f5b7b1, #ffffff)"> <input type="submit" value="Xóa" class="btn btn-default" /> </button> |
+            <button class="col-md-offset-5 col-md-1" style="background-image: linear-gradient(to right, #ffd800, #ffffff);width: 100px; height:40px;"> @Html.ActionLink("Quay lại", "Index")</button>
+        </div>
+    }
+</div>

@@ -1,0 +1,50 @@
+﻿@model K22CNT2_NongVanBach_2210900003.Models.User
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>User</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ho_ten)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ho_ten)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mat_khau)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mat_khau)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.so_dien_thoai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.so_dien_thoai)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ma_nguoi_dung }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

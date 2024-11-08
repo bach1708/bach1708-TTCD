@@ -1,0 +1,20 @@
+﻿/* Class cho button link */
+.button-link {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 0 5px;
+    color: white;
+    text-decoration: none;
+    background: linear-gradient(90deg, #004afb, #808080);
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+    .button-link:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        background: linear-gradient(45deg, #87ceeb, #ffffff); /* Chuyển màu khi hover */
+        text-decoration: none;
+        color: white;
+    }

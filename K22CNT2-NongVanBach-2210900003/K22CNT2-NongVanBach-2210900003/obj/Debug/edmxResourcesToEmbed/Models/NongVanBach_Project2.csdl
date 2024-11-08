@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NongVanBach_Project2" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Admin">
+    <Key>
+      <PropertyRef Name="ma_quan_tri" />
+    </Key>
+    <Property Name="ma_quan_tri" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ho_ten" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mat_khau" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Booking">
+    <Key>
+      <PropertyRef Name="ma_dat_ve" />
+    </Key>
+    <Property Name="ma_dat_ve" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ma_nguoi_dung" Type="Int32" />
+    <Property Name="ma_suat_chieu" Type="Int32" />
+    <Property Name="ghe_ngoi" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="tong_tien" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="trang_thai" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ngay_dat" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="User" Relationship="Self.FK__Bookings__ma_ngu__5AEE82B9" FromRole="Bookings" ToRole="Users" />
+    <NavigationProperty Name="Showtime" Relationship="Self.FK__Bookings__ma_sua__5BE2A6F2" FromRole="Bookings" ToRole="Showtimes" />
+    <NavigationProperty Name="Payments" Relationship="Self.FK__Payments__ma_dat__5FB337D6" FromRole="Bookings" ToRole="Payments" />
+  </EntityType>
+  <EntityType Name="Cart">
+    <Key>
+      <PropertyRef Name="CartId" />
+    </Key>
+    <Property Name="CartId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="User" Relationship="Self.FK__Cart__UserId__70DDC3D8" FromRole="Cart" ToRole="Users" />
+    <NavigationProperty Name="CartItems" Relationship="Self.FK__CartItem__CartId__74AE54BC" FromRole="Cart" ToRole="CartItem" />
+  </EntityType>
+  <EntityType Name="CartItem">
+    <Key>
+      <PropertyRef Name="CartItemId" />
+    </Key>
+    <Property Name="CartItemId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CartId" Type="Int32" Nullable="false" />
+    <Property Name="MovieId" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <NavigationProperty Name="Cart" Relationship="Self.FK__CartItem__CartId__74AE54BC" FromRole="CartItem" ToRole="Cart" />
+    <NavigationProperty Name="Movy" Relationship="Self.FK__CartItem__MovieI__75A278F5" FromRole="CartItem" ToRole="Movies" />
+  </EntityType>
+  <EntityType Name="Cinema">
+    <Key>
+      <PropertyRef Name="ma_rap" />
+    </Key>
+    <Property Name="ma_rap" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ten_rap" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="dia_chi" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="suc_chua" Type="Int32" />
+    <NavigationProperty Name="Showtimes" Relationship="Self.FK__Showtimes__ma_ra__5441852A" FromRole="Cinemas" ToRole="Showtimes" />
+  </EntityType>
+  <EntityType Name="Movy">
+    <Key>
+      <PropertyRef Name="ma_phim" />
+    </Key>
+    <Property Name="ma_phim" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ten_phim" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="the_loai" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="dao_dien" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="dien_vien" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="thoi_luong" Type="Int32" />
+    <Property Name="ngay_phat_hanh" Type="DateTime" Precision="0" />
+    <Property Name="mo_ta" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CartItems" Relationship="Self.FK__CartItem__MovieI__75A278F5" FromRole="Movies" ToRole="CartItem" />
+    <NavigationProperty Name="Showtimes" Relationship="Self.FK__Showtimes__ma_ph__534D60F1" FromRole="Movies" ToRole="Showtimes" />
+    <Property Name="image_path" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Payment">
+    <Key>
+      <PropertyRef Name="ma_giao_dich" />
+    </Key>
+    <Property Name="ma_giao_dich" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ma_dat_ve" Type="Int32" />
+    <Property Name="phuong_thuc_thanh_toan" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="so_tien" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="trang_thai_thanh_toan" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ngay_thanh_toan" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Booking" Relationship="Self.FK__Payments__ma_dat__5FB337D6" FromRole="Payments" ToRole="Bookings" />
+  </EntityType>
+  <EntityType Name="Showtime">
+    <Key>
+      <PropertyRef Name="ma_suat_chieu" />
+    </Key>
+    <Property Name="ma_suat_chieu" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ma_phim" Type="Int32" />
+    <Property Name="ma_rap" Type="Int32" />
+    <Property Name="ngay_chieu" Type="DateTime" Precision="0" />
+    <Property Name="gio_chieu" Type="Time" Precision="7" />
+    <Property Name="phong_chieu" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Bookings" Relationship="Self.FK__Bookings__ma_sua__5BE2A6F2" FromRole="Showtimes" ToRole="Bookings" />
+    <NavigationProperty Name="Cinema" Relationship="Self.FK__Showtimes__ma_ra__5441852A" FromRole="Showtimes" ToRole="Cinemas" />
+    <NavigationProperty Name="Movy" Relationship="Self.FK__Showtimes__ma_ph__534D60F1" FromRole="Showtimes" ToRole="Movies" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="ma_nguoi_dung" />
+    </Key>
+    <Property Name="ma_nguoi_dung" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ho_ten" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mat_khau" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="so_dien_thoai" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Bookings" Relationship="Self.FK__Bookings__ma_ngu__5AEE82B9" FromRole="Users" ToRole="Bookings" />
+    <NavigationProperty Name="Carts" Relationship="Self.FK__Cart__UserId__70DDC3D8" FromRole="Users" ToRole="Cart" />
+  </EntityType>
+  <Association Name="FK__Bookings__ma_ngu__5AEE82B9">
+    <End Role="Users" Type="Self.User" Multiplicity="0..1" />
+    <End Role="Bookings" Type="Self.Booking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="ma_nguoi_dung" />
+      </Principal>
+      <Dependent Role="Bookings">
+        <PropertyRef Name="ma_nguoi_dung" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Bookings__ma_sua__5BE2A6F2">
+    <End Role="Showtimes" Type="Self.Showtime" Multiplicity="0..1" />
+    <End Role="Bookings" Type="Self.Booking" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Showtimes">
+        <PropertyRef Name="ma_suat_chieu" />
+      </Principal>
+      <Dependent Role="Bookings">
+        <PropertyRef Name="ma_suat_chieu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Payments__ma_dat__5FB337D6">
+    <End Role="Bookings" Type="Self.Booking" Multiplicity="0..1" />
+    <End Role="Payments" Type="Self.Payment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bookings">
+        <PropertyRef Name="ma_dat_ve" />
+      </Principal>
+      <Dependent Role="Payments">
+        <PropertyRef Name="ma_dat_ve" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Cart__UserId__70DDC3D8">
+    <End Role="Users" Type="Self.User" Multiplicity="1" />
+    <End Role="Cart" Type="Self.Cart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="ma_nguoi_dung" />
+      </Principal>
+      <Dependent Role="Cart">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CartItem__CartId__74AE54BC">
+    <End Role="Cart" Type="Self.Cart" Multiplicity="1" />
+    <End Role="CartItem" Type="Self.CartItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cart">
+        <PropertyRef Name="CartId" />
+      </Principal>
+      <Dependent Role="CartItem">
+        <PropertyRef Name="CartId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CartItem__MovieI__75A278F5">
+    <End Role="Movies" Type="Self.Movy" Multiplicity="1" />
+    <End Role="CartItem" Type="Self.CartItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Movies">
+        <PropertyRef Name="ma_phim" />
+      </Principal>
+      <Dependent Role="CartItem">
+        <PropertyRef Name="MovieId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Showtimes__ma_ra__5441852A">
+    <End Role="Cinemas" Type="Self.Cinema" Multiplicity="0..1" />
+    <End Role="Showtimes" Type="Self.Showtime" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cinemas">
+        <PropertyRef Name="ma_rap" />
+      </Principal>
+      <Dependent Role="Showtimes">
+        <PropertyRef Name="ma_rap" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Showtimes__ma_ph__534D60F1">
+    <End Role="Movies" Type="Self.Movy" Multiplicity="0..1" />
+    <End Role="Showtimes" Type="Self.Showtime" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Movies">
+        <PropertyRef Name="ma_phim" />
+      </Principal>
+      <Dependent Role="Showtimes">
+        <PropertyRef Name="ma_phim" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Admins" EntityType="Self.Admin" />
+    <EntitySet Name="Bookings" EntityType="Self.Booking" />
+    <EntitySet Name="Carts" EntityType="Self.Cart" />
+    <EntitySet Name="CartItems" EntityType="Self.CartItem" />
+    <EntitySet Name="Cinemas" EntityType="Self.Cinema" />
+    <EntitySet Name="Movies" EntityType="Self.Movy" />
+    <EntitySet Name="Payments" EntityType="Self.Payment" />
+    <EntitySet Name="Showtimes" EntityType="Self.Showtime" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <AssociationSet Name="FK__Bookings__ma_ngu__5AEE82B9" Association="Self.FK__Bookings__ma_ngu__5AEE82B9">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Bookings" EntitySet="Bookings" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Bookings__ma_sua__5BE2A6F2" Association="Self.FK__Bookings__ma_sua__5BE2A6F2">
+      <End Role="Showtimes" EntitySet="Showtimes" />
+      <End Role="Bookings" EntitySet="Bookings" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Payments__ma_dat__5FB337D6" Association="Self.FK__Payments__ma_dat__5FB337D6">
+      <End Role="Bookings" EntitySet="Bookings" />
+      <End Role="Payments" EntitySet="Payments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Cart__UserId__70DDC3D8" Association="Self.FK__Cart__UserId__70DDC3D8">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Cart" EntitySet="Carts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CartItem__CartId__74AE54BC" Association="Self.FK__CartItem__CartId__74AE54BC">
+      <End Role="Cart" EntitySet="Carts" />
+      <End Role="CartItem" EntitySet="CartItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CartItem__MovieI__75A278F5" Association="Self.FK__CartItem__MovieI__75A278F5">
+      <End Role="Movies" EntitySet="Movies" />
+      <End Role="CartItem" EntitySet="CartItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Showtimes__ma_ra__5441852A" Association="Self.FK__Showtimes__ma_ra__5441852A">
+      <End Role="Cinemas" EntitySet="Cinemas" />
+      <End Role="Showtimes" EntitySet="Showtimes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Showtimes__ma_ph__534D60F1" Association="Self.FK__Showtimes__ma_ph__534D60F1">
+      <End Role="Movies" EntitySet="Movies" />
+      <End Role="Showtimes" EntitySet="Showtimes" />
+    </AssociationSet>
+    <EntitySet Name="CT_DON_HANG" EntityType="NongVanBach_Project2.CT_DON_HANG" />
+    <EntitySet Name="DON_HANG" EntityType="NongVanBach_Project2.DON_HANG" />
+    <EntitySet Name="KHACH_HANG" EntityType="NongVanBach_Project2.KHACH_HANG" />
+    <EntitySet Name="SAN_PHAM" EntityType="NongVanBach_Project2.SAN_PHAM" />
+    <AssociationSet Name="FK__CT_DON_HA__ID_DH__03F0984C" Association="NongVanBach_Project2.FK__CT_DON_HA__ID_DH__03F0984C">
+      <End Role="DON_HANG" EntitySet="DON_HANG" />
+      <End Role="CT_DON_HANG" EntitySet="CT_DON_HANG" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CT_DON_HA__ID_SP__04E4BC85" Association="NongVanBach_Project2.FK__CT_DON_HA__ID_SP__04E4BC85">
+      <End Role="SAN_PHAM" EntitySet="SAN_PHAM" />
+      <End Role="CT_DON_HANG" EntitySet="CT_DON_HANG" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DON_HANG__MaKH__01142BA1" Association="NongVanBach_Project2.FK__DON_HANG__MaKH__01142BA1">
+      <End Role="KHACH_HANG" EntitySet="KHACH_HANG" />
+      <End Role="DON_HANG" EntitySet="DON_HANG" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="CT_DON_HANG">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ID_DH" Type="Int32" Nullable="false" />
+    <Property Name="ID_SP" Type="Int32" Nullable="false" />
+    <Property Name="So_Luong" Type="Int32" Nullable="false" />
+    <Property Name="Don_Gia" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Thanh_Tien" Type="Decimal" Precision="29" Scale="2" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="DON_HANG" Relationship="NongVanBach_Project2.FK__CT_DON_HA__ID_DH__03F0984C" FromRole="CT_DON_HANG" ToRole="DON_HANG" />
+    <NavigationProperty Name="SAN_PHAM" Relationship="NongVanBach_Project2.FK__CT_DON_HA__ID_SP__04E4BC85" FromRole="CT_DON_HANG" ToRole="SAN_PHAM" />
+  </EntityType>
+  <EntityType Name="DON_HANG">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaDH" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MaKH" Type="Int32" />
+    <Property Name="Ten_Nguoi_Nhan" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Dia_Chi_Nhan" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Dien_Thoai_Nhan" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Ngay_dat" Type="DateTime" Precision="3" />
+    <Property Name="Tong_tien" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Trang_thai" Type="Byte" />
+    <NavigationProperty Name="CT_DON_HANG" Relationship="NongVanBach_Project2.FK__CT_DON_HA__ID_DH__03F0984C" FromRole="DON_HANG" ToRole="CT_DON_HANG" />
+    <NavigationProperty Name="KHACH_HANG" Relationship="NongVanBach_Project2.FK__DON_HANG__MaKH__01142BA1" FromRole="DON_HANG" ToRole="KHACH_HANG" />
+  </EntityType>
+  <EntityType Name="KHACH_HANG">
+    <Key>
+      <PropertyRef Name="MaKH" />
+    </Key>
+    <Property Name="MaKH" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ho_ten" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Tai_khoan" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Mat_khau" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Dia_chi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Dien_thoai" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Ngay_sinh" Type="DateTime" Precision="3" />
+    <Property Name="Ngay_cap_nhat" Type="DateTime" Precision="3" />
+    <Property Name="Gioi_tinh" Type="Boolean" />
+    <Property Name="Tich_diem" Type="Int32" />
+    <Property Name="Trang_thai" Type="Byte" />
+    <NavigationProperty Name="DON_HANG" Relationship="NongVanBach_Project2.FK__DON_HANG__MaKH__01142BA1" FromRole="KHACH_HANG" ToRole="DON_HANG" />
+  </EntityType>
+  <EntityType Name="SAN_PHAM">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Price" Type="Double" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="Status" Type="Byte" />
+    <NavigationProperty Name="CT_DON_HANG" Relationship="NongVanBach_Project2.FK__CT_DON_HA__ID_SP__04E4BC85" FromRole="SAN_PHAM" ToRole="CT_DON_HANG" />
+  </EntityType>
+  <Association Name="FK__CT_DON_HA__ID_DH__03F0984C">
+    <End Type="NongVanBach_Project2.DON_HANG" Role="DON_HANG" Multiplicity="1" />
+    <End Type="NongVanBach_Project2.CT_DON_HANG" Role="CT_DON_HANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DON_HANG">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CT_DON_HANG">
+        <PropertyRef Name="ID_DH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CT_DON_HA__ID_SP__04E4BC85">
+    <End Type="NongVanBach_Project2.SAN_PHAM" Role="SAN_PHAM" Multiplicity="1" />
+    <End Type="NongVanBach_Project2.CT_DON_HANG" Role="CT_DON_HANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SAN_PHAM">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CT_DON_HANG">
+        <PropertyRef Name="ID_SP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DON_HANG__MaKH__01142BA1">
+    <End Type="NongVanBach_Project2.KHACH_HANG" Role="KHACH_HANG" Multiplicity="0..1" />
+    <End Type="NongVanBach_Project2.DON_HANG" Role="DON_HANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KHACH_HANG">
+        <PropertyRef Name="MaKH" />
+      </Principal>
+      <Dependent Role="DON_HANG">
+        <PropertyRef Name="MaKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

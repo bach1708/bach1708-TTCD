@@ -1,0 +1,64 @@
+﻿@{
+    ViewBag.Title = "Trang Chủ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/site.css" rel="stylesheet" />
+<link href="~/Content/CSS_TrangChu.css" rel="stylesheet" />
+<link href="~/Content/Slideshow.css" rel="stylesheet" />
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Banner -->
+<hr />
+
+<div class="slide-show">
+    <div class="images-list">
+        <img src="~/Content/images/logopage.png" />
+        <img src="~/Content/images/logopage4.jpg" />
+        <img src="~/Content/images/logopage5.jpg" />
+        <img src="~/Content/images/logopage6.jpg" />
+        <img src="~/Content/images/logopage7.png" />
+    </div>
+</div>
+
+
+<!-- Giới thiệu ngắn -->
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Về Chúng Tôi</h2>
+            <p>Chúng tôi mang đến trải nghiệm đặt vé xem phim trực tuyến tốt nhất. Bạn có thể xem lịch chiếu, đặt chỗ ngồi và thanh toán dễ dàng ngay tại nhà!</p>
+        </div>
+        <div class="col-md-6">
+            <img src="~/Content/images/cinema.jpg" alt="Rạp Chiếu Phim" class="img-fluid rounded">
+        </div>
+    </div>
+</section>
+
+<!-- Tính năng chính -->
+<section class="container mt-5">
+    <h2 class="text-center">Các Tính Năng Chính</h2>
+    <div class="row text-center mt-4">
+        <div class="col-md-4">
+            <i class="fa fa-film fa-3x mb-3" style="color: #e74c3c;"></i>
+            <h4>Đặt Vé Nhanh Chóng</h4>
+            <p>Chọn ghế ngồi và đặt vé chỉ với vài bước đơn giản.</p>
+        </div>
+        <div class="col-md-4">
+            <i class="fa fa-calendar fa-3x mb-3" style="color: #3498db;"></i>
+            <h4>Lịch Chiếu Phim Liên Tục</h4>
+            <p>Cập nhật lịch chiếu mới nhất và thông tin các bộ phim đang hot.</p>
+        </div>
+        <div class="col-md-4">
+            <i class="fa fa-credit-card fa-3x mb-3" style="color: #2ecc71;"></i>
+            <h4>Thanh Toán An Toàn</h4>
+            <p>Hỗ trợ thanh toán trực tuyến an toàn và tiện lợi.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center mt-5" style="background-color: #2c3e50; color: white; padding: 20px;">
+    <p>© 2023 Rạp Chiếu Phim Online - Đặt Vé Xem Phim Trực Tuyến</p>
+</footer>

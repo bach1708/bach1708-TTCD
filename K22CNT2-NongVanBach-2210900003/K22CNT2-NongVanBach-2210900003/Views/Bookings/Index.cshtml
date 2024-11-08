@@ -1,0 +1,64 @@
+﻿@model IEnumerable<K22CNT2_NongVanBach_2210900003.Models.Booking>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Danh Sách Vé Đã Đặt</h2>
+
+<p>
+    @Html.ActionLink("Thêm Mới", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ghe_ngoi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tong_tien)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.trang_thai)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ngay_dat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.User.ho_ten)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Showtime.phong_chieu)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ghe_ngoi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tong_tien)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.trang_thai)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ngay_dat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.ho_ten)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Showtime.phong_chieu)
+            </td>
+            <td>
+                @Html.ActionLink("Sửa", "Edit", new { id = item.ma_dat_ve }) |
+                @Html.ActionLink("Thông Tin", "Details", new { id = item.ma_dat_ve }) |
+                @Html.ActionLink("Xóa", "Delete", new { id = item.ma_dat_ve })
+            </td>
+        </tr>
+    }
+
+</table>

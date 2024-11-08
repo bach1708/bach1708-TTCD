@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="NongVanBach_Project2StoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="Admins">
+      <EntityTypeMapping TypeName="NongVanBach_Project2.Admin">
+        <MappingFragment StoreEntitySet="Admins">
+          <ScalarProperty Name="ma_quan_tri" ColumnName="ma_quan_tri" />
+          <ScalarProperty Name="ho_ten" ColumnName="ho_ten" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="mat_khau" ColumnName="mat_khau" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bookings">
+      <EntityTypeMapping TypeName="NongVanBach_Project2.Booking">
+        <MappingFragment StoreEntitySet="Bookings">
+          <ScalarProperty Name="ma_dat_ve" ColumnName="ma_dat_ve" />
+          <ScalarProperty Name="ma_nguoi_dung" ColumnName="ma_nguoi_dung" />
+          <ScalarProperty Name="ma_suat_chieu" ColumnName="ma_suat_chieu" />
+          <ScalarProperty Name="ghe_ngoi" ColumnName="ghe_ngoi" />
+          <ScalarProperty Name="tong_tien" ColumnName="tong_tien" />
+          <ScalarProperty Name="trang_thai" ColumnName="trang_thai" />
+          <ScalarProperty Name="ngay_dat" ColumnName="ngay_dat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Carts">
+      <EntityTypeMapping TypeName="NongVanBach_Project2.Cart">
+        <MappingFragment StoreEntitySet="Cart">
+          <ScalarProperty Name="CartId" ColumnName="CartId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CartItems">
+      <EntityTypeMapping TypeName="NongVanBach_Project2.CartItem">
+        <MappingFragment StoreEntitySet="CartItem">
+          <ScalarProperty Name="CartItemId" ColumnName="CartItemId" />
+          <ScalarProperty Name="CartId" ColumnName="CartId" />
+          <ScalarProperty Name="MovieId" ColumnName="MovieId" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cinemas">
+      <EntityTypeMapping TypeName="NongVanBach_Project2.Cinema">
+        <MappingFragment StoreEntitySet="Cinemas">
+          <ScalarProperty Name="ma_rap" ColumnName="ma_rap" />
+          <ScalarProperty Name="ten_rap" ColumnName="ten_rap" />
+          <ScalarProperty Name="dia_chi" ColumnName="dia_chi" />
+          <ScalarProperty Name="suc_chua" ColumnName="suc_chua" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Movies">
+      <EntityTypeMapping TypeName="NongVanBach_Project2.Movy">
+        <MappingFragment StoreEntitySet="Movies">
+          <ScalarProperty Name="image_path" ColumnName="image_path" />
+          <ScalarProperty Name="ma_phim" ColumnName="ma_phim" />
+          <ScalarProperty Name="ten_phim" ColumnName="ten_phim" />
+          <ScalarProperty Name="the_loai" ColumnName="the_loai" />
+          <ScalarProperty Name="dao_dien" ColumnName="dao_dien" />
+          <ScalarProperty Name="dien_vien" ColumnName="dien_vien" />
+          <ScalarProperty Name="thoi_luong" ColumnName="thoi_luong" />
+          <ScalarProperty Name="ngay_phat_hanh" ColumnName="ngay_phat_hanh" />
+          <ScalarProperty Name="mo_ta" ColumnName="mo_ta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Payments">
+      <EntityTypeMapping TypeName="NongVanBach_Project2.Payment">
+        <MappingFragment StoreEntitySet="Payments">
+          <ScalarProperty Name="ma_giao_dich" ColumnName="ma_giao_dich" />
+          <ScalarProperty Name="ma_dat_ve" ColumnName="ma_dat_ve" />
+          <ScalarProperty Name="phuong_thuc_thanh_toan" ColumnName="phuong_thuc_thanh_toan" />
+          <ScalarProperty Name="so_tien" ColumnName="so_tien" />
+          <ScalarProperty Name="trang_thai_thanh_toan" ColumnName="trang_thai_thanh_toan" />
+          <ScalarProperty Name="ngay_thanh_toan" ColumnName="ngay_thanh_toan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Showtimes">
+      <EntityTypeMapping TypeName="NongVanBach_Project2.Showtime">
+        <MappingFragment StoreEntitySet="Showtimes">
+          <ScalarProperty Name="ma_suat_chieu" ColumnName="ma_suat_chieu" />
+          <ScalarProperty Name="ma_phim" ColumnName="ma_phim" />
+          <ScalarProperty Name="ma_rap" ColumnName="ma_rap" />
+          <ScalarProperty Name="ngay_chieu" ColumnName="ngay_chieu" />
+          <ScalarProperty Name="gio_chieu" ColumnName="gio_chieu" />
+          <ScalarProperty Name="phong_chieu" ColumnName="phong_chieu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="NongVanBach_Project2.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="NongVanBach_Project2.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="ma_nguoi_dung" ColumnName="ma_nguoi_dung" />
+          <ScalarProperty Name="ho_ten" ColumnName="ho_ten" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="mat_khau" ColumnName="mat_khau" />
+          <ScalarProperty Name="so_dien_thoai" ColumnName="so_dien_thoai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CT_DON_HANG">
+      <EntityTypeMapping TypeName="NongVanBach_Project2.CT_DON_HANG">
+        <MappingFragment StoreEntitySet="CT_DON_HANG">
+          <ScalarProperty Name="Thanh_Tien" ColumnName="Thanh_Tien" />
+          <ScalarProperty Name="Don_Gia" ColumnName="Don_Gia" />
+          <ScalarProperty Name="So_Luong" ColumnName="So_Luong" />
+          <ScalarProperty Name="ID_SP" ColumnName="ID_SP" />
+          <ScalarProperty Name="ID_DH" ColumnName="ID_DH" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DON_HANG">
+      <EntityTypeMapping TypeName="NongVanBach_Project2.DON_HANG">
+        <MappingFragment StoreEntitySet="DON_HANG">
+          <ScalarProperty Name="Trang_thai" ColumnName="Trang_thai" />
+          <ScalarProperty Name="Tong_tien" ColumnName="Tong_tien" />
+          <ScalarProperty Name="Ngay_dat" ColumnName="Ngay_dat" />
+          <ScalarProperty Name="Dien_Thoai_Nhan" ColumnName="Dien_Thoai_Nhan" />
+          <ScalarProperty Name="Dia_Chi_Nhan" ColumnName="Dia_Chi_Nhan" />
+          <ScalarProperty Name="Ten_Nguoi_Nhan" ColumnName="Ten_Nguoi_Nhan" />
+          <ScalarProperty Name="MaKH" ColumnName="MaKH" />
+          <ScalarProperty Name="MaDH" ColumnName="MaDH" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KHACH_HANG">
+      <EntityTypeMapping TypeName="NongVanBach_Project2.KHACH_HANG">
+        <MappingFragment StoreEntitySet="KHACH_HANG">
+          <ScalarProperty Name="Trang_thai" ColumnName="Trang_thai" />
+          <ScalarProperty Name="Tich_diem" ColumnName="Tich_diem" />
+          <ScalarProperty Name="Gioi_tinh" ColumnName="Gioi_tinh" />
+          <ScalarProperty Name="Ngay_cap_nhat" ColumnName="Ngay_cap_nhat" />
+          <ScalarProperty Name="Ngay_sinh" ColumnName="Ngay_sinh" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Dien_thoai" ColumnName="Dien_thoai" />
+          <ScalarProperty Name="Dia_chi" ColumnName="Dia_chi" />
+          <ScalarProperty Name="Mat_khau" ColumnName="Mat_khau" />
+          <ScalarProperty Name="Tai_khoan" ColumnName="Tai_khoan" />
+          <ScalarProperty Name="Ho_ten" ColumnName="Ho_ten" />
+          <ScalarProperty Name="MaKH" ColumnName="MaKH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SAN_PHAM">
+      <EntityTypeMapping TypeName="NongVanBach_Project2.SAN_PHAM">
+        <MappingFragment StoreEntitySet="SAN_PHAM">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

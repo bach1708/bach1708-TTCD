@@ -1,0 +1,65 @@
+﻿@model K22CNT2_NongVanBach_2210900003.Models.Booking
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Thông Tin</h2>
+
+<div>
+    <h4>Vé Đặt</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ghe_ngoi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ghe_ngoi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tong_tien)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tong_tien)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.trang_thai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.trang_thai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ngay_dat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ngay_dat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User.ho_ten)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.ho_ten)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Showtime.phong_chieu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Showtime.phong_chieu)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <button style="width: 50px; height:40px;"> @Html.ActionLink("Sửa", "Edit", new { id = Model.ma_nguoi_dung }) </button>|<button style="width: 100px; height:40px;"> @Html.ActionLink("Quay lại", "Index")</button>
+</p>

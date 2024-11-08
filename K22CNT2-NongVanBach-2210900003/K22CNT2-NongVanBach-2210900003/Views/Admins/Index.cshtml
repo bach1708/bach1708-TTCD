@@ -1,0 +1,46 @@
+﻿@model IEnumerable<K22CNT2_NongVanBach_2210900003.Models.Admin>
+
+@{
+    ViewBag.Title = "Index";
+}
+<link href="~/Content/ButtonStyles.css" rel="stylesheet"/>
+<h2>Danh Sách Tài Khoản Admin đã tạo</h2>
+
+<p>
+    @Html.ActionLink("Tạo thêm", "Create", null, new { @class = "button-link" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            <span>Họ Tên</span>
+        </th>
+        <th>
+            <span>Email</span>
+        </th>
+        <th>
+            <span>Mật Khẩu</span>
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ho_ten)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mat_khau)
+            </td>
+            <td>
+                @Html.ActionLink("Sửa", "Edit", new { id = item.ma_quan_tri }, new { @class = "button-link" }) |
+                @Html.ActionLink("Thông Tin", "Details", new { id = item.ma_quan_tri }, new { @class = "button-link" }) |
+                @Html.ActionLink("Xóa", "Delete", new { id = item.ma_quan_tri }, new { @class = "button-link" })
+            </td>
+        </tr>
+    }
+
+</table>
