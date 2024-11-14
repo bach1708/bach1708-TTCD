@@ -48,6 +48,15 @@ namespace K22_CNT2_NongVanBach.Bussiness
         {
             return Items.Sum(i => i.Price * i.Qty);
         }
-
+        // Cập nhật giỏ hàng
+        public void UpdateFromCart(int productId, int qty)
+        {
+            var existingItem = Items.FirstOrDefault(i => i.Id == productId);
+            if (existingItem != null)
+            {
+                existingItem.Qty = qty;
+            }
+            
+        }
     }
 }

@@ -3,48 +3,16 @@
   "WorkspaceRootPath": "E:\\Microsoft Visual 2022\\Th\u1EF1c T\u1EADp Chuy\u00EAn \u0110\u1EC1\\K22_CNT2_NongVanBach\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4F22C754-48DA-4712-997E-5499630E6431}|K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach.csproj|E:\\Microsoft Visual 2022\\Th\u1EF1c T\u1EADp Chuy\u00EAn \u0110\u1EC1\\K22_CNT2_NongVanBach\\k22_cnt2_nongvanbach\\bussiness\\shoppingcart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F22C754-48DA-4712-997E-5499630E6431}|K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach.csproj|solutionrelative:k22_cnt2_nongvanbach\\bussiness\\shoppingcart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F22C754-48DA-4712-997E-5499630E6431}|K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach.csproj|e:\\microsoft visual 2022\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1\\k22_cnt2_nongvanbach\\k22_cnt2_nongvanbach\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F22C754-48DA-4712-997E-5499630E6431}|K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach.csproj|solutionrelative:k22_cnt2_nongvanbach\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F22C754-48DA-4712-997E-5499630E6431}|K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach.csproj|e:\\microsoft visual 2022\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1\\k22_cnt2_nongvanbach\\k22_cnt2_nongvanbach\\areas\\adminnvb\\views\\nvbdashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4F22C754-48DA-4712-997E-5499630E6431}|K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach.csproj|solutionrelative:k22_cnt2_nongvanbach\\areas\\adminnvb\\views\\nvbdashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F22C754-48DA-4712-997E-5499630E6431}|K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach.csproj|e:\\microsoft visual 2022\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1\\k22_cnt2_nongvanbach\\k22_cnt2_nongvanbach\\areas\\adminnvb\\controllers\\nvbdashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F22C754-48DA-4712-997E-5499630E6431}|K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach.csproj|solutionrelative:k22_cnt2_nongvanbach\\areas\\adminnvb\\controllers\\nvbdashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F22C754-48DA-4712-997E-5499630E6431}|K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach.csproj|e:\\microsoft visual 2022\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1\\k22_cnt2_nongvanbach\\k22_cnt2_nongvanbach\\areas\\adminnvb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4F22C754-48DA-4712-997E-5499630E6431}|K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach.csproj|solutionrelative:k22_cnt2_nongvanbach\\areas\\adminnvb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F22C754-48DA-4712-997E-5499630E6431}|K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach.csproj|e:\\microsoft visual 2022\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1\\k22_cnt2_nongvanbach\\k22_cnt2_nongvanbach\\areas\\adminnvb\\controllers\\nvbdon_hangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F22C754-48DA-4712-997E-5499630E6431}|K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach.csproj|solutionrelative:k22_cnt2_nongvanbach\\areas\\adminnvb\\controllers\\nvbdon_hangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F22C754-48DA-4712-997E-5499630E6431}|K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach.csproj|e:\\microsoft visual 2022\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1\\k22_cnt2_nongvanbach\\k22_cnt2_nongvanbach\\areas\\adminnvb\\adminnvbarearegistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F22C754-48DA-4712-997E-5499630E6431}|K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach.csproj|solutionrelative:k22_cnt2_nongvanbach\\areas\\adminnvb\\adminnvbarearegistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4F22C754-48DA-4712-997E-5499630E6431}|K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach.csproj|e:\\microsoft visual 2022\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1\\k22_cnt2_nongvanbach\\k22_cnt2_nongvanbach\\content\\css_movie_ticket.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4F22C754-48DA-4712-997E-5499630E6431}|K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach.csproj|solutionrelative:k22_cnt2_nongvanbach\\content\\css_movie_ticket.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4F22C754-48DA-4712-997E-5499630E6431}|K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach.csproj|e:\\microsoft visual 2022\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1\\k22_cnt2_nongvanbach\\k22_cnt2_nongvanbach\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{4F22C754-48DA-4712-997E-5499630E6431}|K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach.csproj|solutionrelative:k22_cnt2_nongvanbach\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4F22C754-48DA-4712-997E-5499630E6431}|K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach.csproj|E:\\Microsoft Visual 2022\\Th\u1EF1c T\u1EADp Chuy\u00EAn \u0110\u1EC1\\K22_CNT2_NongVanBach\\k22_cnt2_nongvanbach\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4F22C754-48DA-4712-997E-5499630E6431}|K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach.csproj|solutionrelative:k22_cnt2_nongvanbach\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F22C754-48DA-4712-997E-5499630E6431}|K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach.csproj|E:\\Microsoft Visual 2022\\Th\u1EF1c T\u1EADp Chuy\u00EAn \u0110\u1EC1\\K22_CNT2_NongVanBach\\k22_cnt2_nongvanbach\\views\\cart\\thongtinthanhtoan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4F22C754-48DA-4712-997E-5499630E6431}|K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach.csproj|solutionrelative:k22_cnt2_nongvanbach\\views\\cart\\thongtinthanhtoan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4F22C754-48DA-4712-997E-5499630E6431}|K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach.csproj|E:\\Microsoft Visual 2022\\Th\u1EF1c T\u1EADp Chuy\u00EAn \u0110\u1EC1\\K22_CNT2_NongVanBach\\k22_cnt2_nongvanbach\\modelview\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F22C754-48DA-4712-997E-5499630E6431}|K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach.csproj|solutionrelative:k22_cnt2_nongvanbach\\modelview\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4F22C754-48DA-4712-997E-5499630E6431}|K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach.csproj|e:\\microsoft visual 2022\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1\\k22_cnt2_nongvanbach\\k22_cnt2_nongvanbach\\views\\san_pham\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F22C754-48DA-4712-997E-5499630E6431}|K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach.csproj|solutionrelative:k22_cnt2_nongvanbach\\views\\san_pham\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,149 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\Microsoft Visual 2022\\Th\u1EF1c T\u1EADp Chuy\u00EAn \u0110\u1EC1\\K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach\\Areas\\AdminNVB\\Views\\NVBDashBoard\\Index.cshtml",
-              "RelativeDocumentMoniker": "K22_CNT2_NongVanBach\\Areas\\AdminNVB\\Views\\NVBDashBoard\\Index.cshtml",
-              "ToolTip": "E:\\Microsoft Visual 2022\\Th\u1EF1c T\u1EADp Chuy\u00EAn \u0110\u1EC1\\K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach\\Areas\\AdminNVB\\Views\\NVBDashBoard\\Index.cshtml",
-              "RelativeToolTip": "K22_CNT2_NongVanBach\\Areas\\AdminNVB\\Views\\NVBDashBoard\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-08T07:44:46.838Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "E:\\Microsoft Visual 2022\\Th\u1EF1c T\u1EADp Chuy\u00EAn \u0110\u1EC1\\K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach\\Areas\\AdminNVB\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "K22_CNT2_NongVanBach\\Areas\\AdminNVB\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "E:\\Microsoft Visual 2022\\Th\u1EF1c T\u1EADp Chuy\u00EAn \u0110\u1EC1\\K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach\\Areas\\AdminNVB\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "K22_CNT2_NongVanBach\\Areas\\AdminNVB\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAABLAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-08T07:42:23.371Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "NVBDashBoardController.cs",
-              "DocumentMoniker": "E:\\Microsoft Visual 2022\\Th\u1EF1c T\u1EADp Chuy\u00EAn \u0110\u1EC1\\K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach\\Areas\\AdminNVB\\Controllers\\NVBDashBoardController.cs",
-              "RelativeDocumentMoniker": "K22_CNT2_NongVanBach\\Areas\\AdminNVB\\Controllers\\NVBDashBoardController.cs",
-              "ToolTip": "E:\\Microsoft Visual 2022\\Th\u1EF1c T\u1EADp Chuy\u00EAn \u0110\u1EC1\\K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach\\Areas\\AdminNVB\\Controllers\\NVBDashBoardController.cs",
-              "RelativeToolTip": "K22_CNT2_NongVanBach\\Areas\\AdminNVB\\Controllers\\NVBDashBoardController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T07:41:21.143Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "NVBDON_HANGController.cs",
-              "DocumentMoniker": "E:\\Microsoft Visual 2022\\Th\u1EF1c T\u1EADp Chuy\u00EAn \u0110\u1EC1\\K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach\\Areas\\AdminNVB\\Controllers\\NVBDON_HANGController.cs",
-              "RelativeDocumentMoniker": "K22_CNT2_NongVanBach\\Areas\\AdminNVB\\Controllers\\NVBDON_HANGController.cs",
-              "ToolTip": "E:\\Microsoft Visual 2022\\Th\u1EF1c T\u1EADp Chuy\u00EAn \u0110\u1EC1\\K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach\\Areas\\AdminNVB\\Controllers\\NVBDON_HANGController.cs",
-              "RelativeToolTip": "K22_CNT2_NongVanBach\\Areas\\AdminNVB\\Controllers\\NVBDON_HANGController.cs",
-              "ViewState": "AQIAADsAAAAAAAAAAAAIwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T07:38:02.078Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AdminNVBAreaRegistration.cs",
-              "DocumentMoniker": "E:\\Microsoft Visual 2022\\Th\u1EF1c T\u1EADp Chuy\u00EAn \u0110\u1EC1\\K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach\\Areas\\AdminNVB\\AdminNVBAreaRegistration.cs",
-              "RelativeDocumentMoniker": "K22_CNT2_NongVanBach\\Areas\\AdminNVB\\AdminNVBAreaRegistration.cs",
-              "ToolTip": "E:\\Microsoft Visual 2022\\Th\u1EF1c T\u1EADp Chuy\u00EAn \u0110\u1EC1\\K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach\\Areas\\AdminNVB\\AdminNVBAreaRegistration.cs",
-              "RelativeToolTip": "K22_CNT2_NongVanBach\\Areas\\AdminNVB\\AdminNVBAreaRegistration.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T07:34:44.132Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "E:\\Microsoft Visual 2022\\Th\u1EF1c T\u1EADp Chuy\u00EAn \u0110\u1EC1\\K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "K22_CNT2_NongVanBach\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "E:\\Microsoft Visual 2022\\Th\u1EF1c T\u1EADp Chuy\u00EAn \u0110\u1EC1\\K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "K22_CNT2_NongVanBach\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAABYAAAAvAAAA",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAAAE0AAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-08T06:48:19.421Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CartController.cs",
-              "DocumentMoniker": "E:\\Microsoft Visual 2022\\Th\u1EF1c T\u1EADp Chuy\u00EAn \u0110\u1EC1\\K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach\\Controllers\\CartController.cs",
-              "RelativeDocumentMoniker": "K22_CNT2_NongVanBach\\Controllers\\CartController.cs",
-              "ToolTip": "E:\\Microsoft Visual 2022\\Th\u1EF1c T\u1EADp Chuy\u00EAn \u0110\u1EC1\\K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach\\Controllers\\CartController.cs",
-              "RelativeToolTip": "K22_CNT2_NongVanBach\\Controllers\\CartController.cs",
-              "ViewState": "AQIAACIAAAAAAAAAAAAUwEQAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T09:42:44.509Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\Microsoft Visual 2022\\Th\u1EF1c T\u1EADp Chuy\u00EAn \u0110\u1EC1\\K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach\\Views\\Cart\\Index.cshtml",
-              "RelativeDocumentMoniker": "K22_CNT2_NongVanBach\\Views\\Cart\\Index.cshtml",
-              "ToolTip": "E:\\Microsoft Visual 2022\\Th\u1EF1c T\u1EADp Chuy\u00EAn \u0110\u1EC1\\K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach\\Views\\Cart\\Index.cshtml",
-              "RelativeToolTip": "K22_CNT2_NongVanBach\\Views\\Cart\\Index.cshtml",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAiwAwAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-07T09:54:55.487Z",
+              "WhenOpened": "2024-11-12T08:58:55.279Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ShoppingCart.cs",
-              "DocumentMoniker": "E:\\Microsoft Visual 2022\\Th\u1EF1c T\u1EADp Chuy\u00EAn \u0110\u1EC1\\K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach\\Bussiness\\ShoppingCart.cs",
-              "RelativeDocumentMoniker": "K22_CNT2_NongVanBach\\Bussiness\\ShoppingCart.cs",
-              "ToolTip": "E:\\Microsoft Visual 2022\\Th\u1EF1c T\u1EADp Chuy\u00EAn \u0110\u1EC1\\K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach\\Bussiness\\ShoppingCart.cs",
-              "RelativeToolTip": "K22_CNT2_NongVanBach\\Bussiness\\ShoppingCart.cs",
-              "ViewState": "AQIAABcAAAAAAAAAAAAUwBoAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T10:27:46.298Z",
+              "Title": "css_movie_ticket.css",
+              "DocumentMoniker": "E:\\Microsoft Visual 2022\\Th\u1EF1c T\u1EADp Chuy\u00EAn \u0110\u1EC1\\K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach\\Content\\css_movie_ticket.css",
+              "RelativeDocumentMoniker": "K22_CNT2_NongVanBach\\Content\\css_movie_ticket.css",
+              "ToolTip": "E:\\Microsoft Visual 2022\\Th\u1EF1c T\u1EADp Chuy\u00EAn \u0110\u1EC1\\K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach\\Content\\css_movie_ticket.css",
+              "RelativeToolTip": "K22_CNT2_NongVanBach\\Content\\css_movie_ticket.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-11-12T07:59:03.485Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ThongTinThanhToan.cshtml",
-              "DocumentMoniker": "E:\\Microsoft Visual 2022\\Th\u1EF1c T\u1EADp Chuy\u00EAn \u0110\u1EC1\\K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach\\Views\\Cart\\ThongTinThanhToan.cshtml",
-              "RelativeDocumentMoniker": "K22_CNT2_NongVanBach\\Views\\Cart\\ThongTinThanhToan.cshtml",
-              "ToolTip": "E:\\Microsoft Visual 2022\\Th\u1EF1c T\u1EADp Chuy\u00EAn \u0110\u1EC1\\K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach\\Views\\Cart\\ThongTinThanhToan.cshtml",
-              "RelativeToolTip": "K22_CNT2_NongVanBach\\Views\\Cart\\ThongTinThanhToan.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAKAAAA",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\Microsoft Visual 2022\\Th\u1EF1c T\u1EADp Chuy\u00EAn \u0110\u1EC1\\K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach\\Views\\SAN_PHAM\\Index.cshtml",
+              "RelativeDocumentMoniker": "K22_CNT2_NongVanBach\\Views\\SAN_PHAM\\Index.cshtml",
+              "ToolTip": "E:\\Microsoft Visual 2022\\Th\u1EF1c T\u1EADp Chuy\u00EAn \u0110\u1EC1\\K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach\\Views\\SAN_PHAM\\Index.cshtml",
+              "RelativeToolTip": "K22_CNT2_NongVanBach\\Views\\SAN_PHAM\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAB+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-07T15:39:18.043Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "CartItem.cs",
-              "DocumentMoniker": "E:\\Microsoft Visual 2022\\Th\u1EF1c T\u1EADp Chuy\u00EAn \u0110\u1EC1\\K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach\\ModelView\\CartItem.cs",
-              "RelativeDocumentMoniker": "K22_CNT2_NongVanBach\\ModelView\\CartItem.cs",
-              "ToolTip": "E:\\Microsoft Visual 2022\\Th\u1EF1c T\u1EADp Chuy\u00EAn \u0110\u1EC1\\K22_CNT2_NongVanBach\\K22_CNT2_NongVanBach\\ModelView\\CartItem.cs",
-              "RelativeToolTip": "K22_CNT2_NongVanBach\\ModelView\\CartItem.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T10:20:57.96Z",
+              "WhenOpened": "2024-11-12T07:58:38.59Z",
               "EditorCaption": ""
             }
           ]

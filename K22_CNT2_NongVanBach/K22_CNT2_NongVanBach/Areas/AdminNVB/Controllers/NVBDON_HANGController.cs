@@ -7,6 +7,8 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using K22_CNT2_NongVanBach.Models;
+using K22_CNT2_NongVanBach.ModelView;
+using Microsoft.Ajax.Utilities;
 
 namespace K22_CNT2_NongVanBach.Areas.AdminNVB.Controllers
 {
@@ -74,8 +76,29 @@ namespace K22_CNT2_NongVanBach.Areas.AdminNVB.Controllers
                 return HttpNotFound();
             }
             ViewBag.MaKH = new SelectList(db.KHACH_HANG, "MaKH", "Ho_ten", dON_HANG.MaKH);
+
+
+            //Thông tin chi tiết đơn hàng
+            var donHangChiTiet = (from ct in db.CT_DON_HANG
+                                 join sp in db.SAN_PHAM on ct.ID_SP equals sp.ID
+                                 where ct.ID_DH == id
+                                 select new DH_ChiTiet
+                                 {
+                                     Id = ct.ID,
+                                     Name = sp.Name,
+                                     Image = sp.Image,
+                                     Price = ct.Don_gia,
+                                     Qty = ct.So_Luong,
+                                     Total = ct.Thanh_tien
+
+                                 }).ToList();
+            ViewBag.donHangChiTiet = donHangChiTiet;
             return View(dON_HANG);
+
         }
+
+        
+        
 
         // POST: AdminNVB/NVBDON_HANG/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
@@ -86,7 +109,10 @@ namespace K22_CNT2_NongVanBach.Areas.AdminNVB.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(dON_HANG).State = EntityState.Modified;
+                var donHang = db.DON_HANG.FirstOrDefault(x=>x.ID ==dON_HANG.ID);
+                donHang.Trang_thai = dON_HANG.Trang_thai;
+                
+                db.Entry(donHang).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }

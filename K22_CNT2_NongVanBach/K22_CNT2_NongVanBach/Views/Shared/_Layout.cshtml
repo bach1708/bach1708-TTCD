@@ -3,33 +3,79 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/css_movie_ticket.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/Content/CSS_TrangChu.css" rel="stylesheet" />
+    <link href="~/Content/Slideshow.css" rel="stylesheet" />
     <title>@ViewBag.Title - My ASP.NET Application</title>
+
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
         <div class="container">
-            @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            <a href="@Url.Action("Index", "Home")" class="navbar-brand">
+                <img src="~/Content/Image/napoleon_logo1.png" alt="Application Logo" style="width:130px;height:80px" />
+            </a>
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
-                <ul class="navbar-nav flex-grow-1">
-                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                <ul class="navbar-nav flex-grow-1" style="text-align:center">
+                    <li>@Html.ActionLink("Nông Văn Bách", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                @*  <li>@Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li> *@
                     <li>@Html.ActionLink("Sản Phẩm", "Index", "SAN_PHAM", new { area = "" }, new { @class = "nav-link" })</li>
                     <li>@Html.ActionLink("Giỏ Hàng", "Index", "Cart", new { area = "" }, new { @class = "nav-link" })</li>
                 </ul>
             </div>
+
+            <!-- Mục tìm kiếm -->
+            <div class="form-inline ml-auto">
+                <form class="form-inline" action="#" method="get">
+                    <div class="input-group" style="display: inline-flex; position: relative;">
+                        <!-- Ô tìm kiếm -->
+                        <input class="form-control" type="search" placeholder="Tìm kiếm..." aria-label="Search" style="padding-right: 40px; width: 250px; z-index: 1;">
+
+                        <div class="input-group-append" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); z-index: 2;">
+                            <!-- Hình ảnh kính lúp -->
+                            <button class="btn btn-outline-secondary" type="submit" style="background-color: transparent; border: none; padding: 0;">
+                                <img src="~/Content/Image/seach.jpg" alt="Search" style="width: 30px; height: 30px;" />
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <ul class="navbar-nav ml-auto">
+                @if (Session["Tai_khoan"] == null)
+                {
+                    <li>
+                        <a href="@Url.Action("Login", "Admin", new { area = "AdminNVB" })" class="btn" style="background-color: green; color: white;
+                        transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#006400'" onmouseout="this.style.backgroundColor='green'">
+                            Đăng nhập
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Register", "Admin", new { area = "AdminNVB" })" class="btn" style="background-color: blue; color: white;
+                        transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#4682B4'" onmouseout="this.style.backgroundColor='blue'">
+                            Đăng ký
+                        </a>
+                    </li>
+                }
+                else
+                {
+                    <li><a href="@Url.Action("Logout", "Admin", new { area = "AdminNVB" })">Đăng xuất</a></li>
+                }
+            </ul>
         </div>
     </nav>
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
+        <footer style="width:100%">
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </footer>
     </div>

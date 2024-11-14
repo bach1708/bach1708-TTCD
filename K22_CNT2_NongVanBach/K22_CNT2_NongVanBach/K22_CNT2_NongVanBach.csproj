@@ -130,6 +130,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\AdminNVB\AdminNVBAreaRegistration.cs" />
+    <Compile Include="Areas\AdminNVB\Controllers\AdminController.cs" />
     <Compile Include="Areas\AdminNVB\Controllers\NVBDashBoardController.cs" />
     <Compile Include="Areas\AdminNVB\Controllers\NVBDON_HANGController.cs" />
     <Compile Include="Bussiness\ShoppingCart.cs" />
@@ -170,6 +171,7 @@
       <DependentUpon>ModelNVB.tt</DependentUpon>
     </Compile>
     <Compile Include="ModelView\CartItem.cs" />
+    <Compile Include="ModelView\DH_ChiTiet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -189,6 +191,32 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\css_movie_ticket.css" />
+    <Content Include="Content\CSS_TrangChu.css" />
+    <Content Include="Content\Image\Aioantrongvuonxuan.jpg" />
+    <Content Include="Content\Image\Codauhaomon.jpg" />
+    <Content Include="Content\Image\ctkm-xem-quy-xem-nom-1702-x-621-172507-221024-34.png" />
+    <Content Include="Content\Image\Cuoixuyenbiengioi.jpg" />
+    <Content Include="Content\Image\Ellivabianchiectauma.png" />
+    <Content Include="Content\Image\le-hoi-doi-ma-1702-x-621-170901-101024-19.png" />
+    <Content Include="Content\Image\Linhmieu.jpg" />
+    <Content Include="Content\Image\logopage.png" />
+    <Content Include="Content\Image\logopage2.png" />
+    <Content Include="Content\Image\logopage3.png" />
+    <Content Include="Content\Image\logopage4.jpg" />
+    <Content Include="Content\Image\logopage5.jpg" />
+    <Content Include="Content\Image\logopage6.jpg" />
+    <Content Include="Content\Image\logopage7.png" />
+    <Content Include="Content\Image\napoleon_logo1.png" />
+    <Content Include="Content\Image\Ngayxuacomotchuyentinh.jpg" />
+    <Content Include="Content\Image\Quyantang2.jpg" />
+    <Content Include="Content\Image\RedOne.jpg" />
+    <Content Include="Content\Image\Redonematmado.jpg" />
+    <Content Include="Content\Image\seach.jpg" />
+    <Content Include="Content\Image\Thanduoc.jpg" />
+    <Content Include="Content\Image\Venom3.jpg" />
+    <Content Include="Content\Image\Venomlogo.jpg" />
+    <Content Include="Content\Slideshow.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -224,6 +252,9 @@
     <Content Include="Areas\AdminNVB\Views\NVBDON_HANG\Edit.cshtml" />
     <Content Include="Areas\AdminNVB\Views\NVBDON_HANG\Index.cshtml" />
     <Content Include="Areas\AdminNVB\Views\NVBDashBoard\Index.cshtml" />
+    <Content Include="Areas\AdminNVB\Views\Admin\Login.cshtml" />
+    <Content Include="Areas\AdminNVB\Views\Admin\Register.cshtml" />
+    <Content Include="Areas\AdminNVB\Views\Admin\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -256,6 +287,7 @@
     <Content Include="Views\SAN_PHAM\Index.cshtml" />
     <Content Include="Views\Cart\Index.cshtml" />
     <Content Include="Views\Cart\ThongTinThanhToan.cshtml" />
+    <Content Include="Views\Cart\CamOn.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

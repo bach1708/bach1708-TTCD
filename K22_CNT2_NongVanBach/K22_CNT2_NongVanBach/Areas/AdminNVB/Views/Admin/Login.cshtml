@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Đăng Nhập";
+}
+
+<h2>Đăng Nhập</h2>
+
+<form action="/AdminNVB/Admin/Login" method="post">
+    @Html.AntiForgeryToken()
+    <div>
+        <label for="taiKhoan">Tài Khoản</label>
+        <input type="text" name="taiKhoan" required />
+    </div>
+    <div>
+        <label for="matKhau">Mật Khẩu</label>
+        <input type="password" name="matKhau" required />
+    </div>
+    <button type="submit">Đăng Nhập</button>
+    <p>@ViewBag.Error</p>
+</form>
+<a href="@Url.Action("Register", "Admin")">Đăng ký</a>

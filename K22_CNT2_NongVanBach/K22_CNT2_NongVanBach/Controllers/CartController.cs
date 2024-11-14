@@ -25,7 +25,7 @@ namespace K22_CNT2_NongVanBach.Controllers
             }
             return cart;
         }
-        public ActionResult AddToCart (int Id, string name,string image, float price, int qty = 1  ) { 
+        public ActionResult AddToCart (int Id, string name,string image, float price, int qty  ) { 
             var cart = GetCart();
             var item = new CartItem
             {
@@ -34,6 +34,7 @@ namespace K22_CNT2_NongVanBach.Controllers
                 Image = image,
                 Price = price,
                 Qty = qty,
+            
             };
             cart.AddToCart( item );
             return RedirectToAction( "Index" );
@@ -91,7 +92,39 @@ namespace K22_CNT2_NongVanBach.Controllers
                 db.CT_DON_HANG.Add(ct);
                 db.SaveChanges();
             }    
-            return Redirect("/");
+            return Redirect("CamOn");
+        }
+        public ActionResult CamOn()
+        {  return View(); }
+        // Cập nhật giỏ hàng
+        public ActionResult UpdateFromCart(FormCollection form) 
+        { 
+            var cart = GetCart();
+            var ids = form["ID"].Split(',');
+            var qtys = form["qty"].Split(',');
+            for (int i = 0; i<ids.Length;i++)
+            {
+                int id = int.Parse(ids[i]);
+                int qty = int.Parse(qtys[i]);
+                cart.UpdateFromCart(id, qty);
+            }
+            return RedirectToAction("Index");
+        }
+        // Cập nhật item in cart
+        public ActionResult UpdateItemCart(int id, int qty)
+        {
+            var cart = GetCart();
+            
+                cart.UpdateFromCart(id, qty);
+            return RedirectToAction("Index");
+        }
+        //Xóa sản phẩm trong giỏ hàng
+        public ActionResult DeleteItemCart(int id)
+        {
+            var cart = GetCart();
+
+            cart.RemoveFromCart(id);
+            return RedirectToAction("Index");
         }
     }
 }

@@ -1,55 +1,25 @@
 ﻿@model IEnumerable<K22_CNT2_NongVanBach.Models.SAN_PHAM>
+@*<link href="~/Content/css_movie_ticket.css" rel="stylesheet" />
+*@
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Danh sách vé phim";
 }
 
-<h2>Index</h2>
+<h2 style="text-align:center">Các Phim Đang Chiếu Hiện Nay</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Image)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Price)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Quanity)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Status)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Image)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Price)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Quanity)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Status)
-        </td>
-        <td>
-           <a href="/Cart/AddToCart?id=@item.ID&name=@item.Name&image=@item.Image&price=@item.Price&qty=1 " class="btn btn-success">Mua</a>
-        </td>
-    </tr>
-}
-
-</table>
+<div class="movie-ticket-container">
+    @foreach (var item in Model)
+    {
+        <div class="movie-ticket">
+            <img src="@Url.Content("~/Content/Image/" + item.Image)" alt="Movie Poster" class="movie-poster" />
+            <div class="movie-info">
+                <h3 class="movie-title">@Html.DisplayFor(modelItem => item.Name)</h3>
+                <p class="movie-price">Giá vé: @Html.DisplayFor(modelItem => item.Price) VND</p>
+                <p class="movie-quantity">Số lượng: @Html.DisplayFor(modelItem => item.Quanity)</p>
+                <p class="movie-status">Trạng thái: @Html.DisplayFor(modelItem => item.Status)</p>
+                <a href="/Cart/AddToCart?id=@item.ID&name=@item.Name&image=@item.Image&price=@item.Price&qty=1" class="btn btn-success ">Mua</a>
+            </div>
+        </div>
+    }
+</div>

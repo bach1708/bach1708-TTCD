@@ -59,16 +59,26 @@
             @Html.DisplayFor(modelItem => item.Tong_tien)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Trang_thai)
+            
+
+            @{ if (item.Trang_thai == 0)
+                { <span class="text-danger">Chờ xử lý</span> }
+
+                else if (item.Trang_thai == 1)
+                {<span class="text-bg-info">Đang xử lý</span> }
+
+                else
+                { <text >Đã Hoàn Thành</text> }
+            }
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.KHACH_HANG.Ho_ten)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-        </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.KHACH_HANG.Ho_ten)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+        @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+    </td>
     </tr>
 }
 

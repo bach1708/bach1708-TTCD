@@ -1,44 +1,63 @@
 ﻿@model K22_CNT2_NongVanBach.Bussiness.ShoppingCart
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Thông Tin Giỏ Hàng";
 }
-
-<h2>Giỏ Hàng Của Bạn</h2>
-<table class=" table table-bordered">
-    <thead>
-        <tr>
-            <th>Mã</th>
-            <th>Sản Phẩm</th>
-            <th>Ảnh</th>
-            <th>Giá</th>
-            <th>Số Lượng</th>
-            <th>Sản Phẩm</th>
-            <th>Hành Động</th>
-        </tr>
-    </thead>
-    <tbody>
-
-        @foreach (K22_CNT2_NongVanBach.ModelView.CartItem item in Model.Items)
-        {
+@using (Html.BeginForm("UpdateFromCart","Cart"))
+{
+    <h2>Giỏ Hàng Của Bạn</h2>
+    <table class=" table table-bordered">
+        <thead>
             <tr>
-                <td>@item.Id</td>
-                <td>@item.Name</td>
-                <td>@item.Image</td>
-                <td>@item.Price.ToString("C")</td>
-                <td>
-                    @item.Qty
-                                <input type="number" value="@item.Qty" name="qty" />
-                            </td>
-                <td>@item.Total.ToString("C")</td>
-               
-                <td>
-                    <a href="javascript:void(0)" onclick="UpdateCartItem()">Cập Nhật</a>
-                    @Html.ActionLink("Xóa", "RemoveFromCart", new { productId = item.Id })
-                </td>
+                <th>Mã</th>
+                <th>Sản Phẩm</th>
+                <th>Ảnh</th>
+                <th>Giá</th>
+                <th>Số Lượng</th>
+                <th>Sản Phẩm</th>
+                <th>Hành Động</th>
             </tr>
-        }
-    </tbody>
-</table>
-        <h3>Tổng Tiền: @Model.GetTotal().ToString("C")</h3>
-<a href="Cart/ThongTinThanhToan">Thanh toán</a>
+        </thead>
+        <tbody>
+
+            @foreach (K22_CNT2_NongVanBach.ModelView.CartItem item in Model.Items)
+            {
+                <input type="hidden" name="ID" value="@item.Id" />
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td><img src="@Url.Content("~/Content/Image/" + item.Image)" alt="Product Image" width="300" height="150" /></td>
+                    <td>@item.Price.ToString("C")</td>
+                    <td><input type="number"  name="qty" id="soluongmua" data-id="@item.Id"  value="@item.Qty" style="width:50px"/> </td>
+                    <td>@item.Total.ToString("C")</td>
+                    <td>
+                        <a href="/Cart/UpdateItemCart?id=@item.Id&qty=@item.Qty" class="btn btn-outline-success update">
+                        Cập Nhật
+                        </a>
+                       <a href="/Cart/DeleteItemCart?id=@item.Id" class="btn btn-danger">
+                           Xóa
+                       </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <h3>Tổng Tiền: @Model.GetTotal().ToString("C")</h3>
+    <a href="Cart/ThongTinThanhToan" class="btn btn-outline-success">Thanh toán</a>
+    <button class="btn btn-outline-primary mx-2">Cập nhật giỏ hàng</button>
+
+}
+@section scripts{
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"> </script>
+        <script>
+        $(document).ready(function () {
+            $("input[type='number']").change(function () {
+                let Id = $(this).attr("data-id");
+                let Qty = $(this).val();
+                //tạo link update
+                let url = "/Cart/UpdateItemCart?id=" + Id + "&qty=" + Qty;
+                $(this).parent().siblings("td").children("a.update").attr('href', url);
+            })
+        });
+        </script>
     
+}
